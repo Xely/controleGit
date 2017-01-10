@@ -35,4 +35,15 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public User() {
+    }
+
+    public User(String nom, String prenom, String login, String password) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.password = password;
+    }
+    
 }
