@@ -40,4 +40,12 @@ public class User {
     public User() {
         this.droits = new ArrayList<Droit>()
     }
+
+    public User(String nom, String prenom, String login, String password) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.password = password;
+    }
+    
 }
