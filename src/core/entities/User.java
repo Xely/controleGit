@@ -3,6 +3,7 @@ public class User {
     public String prenom;
     public String login;
     public String password;
+    public ArrayList<Droit> droits; 
 
     public String getNom() {
         return nom;
@@ -34,5 +35,9 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public User() {
+        this.droits = new ArrayList<Droit>()
     }
 }
