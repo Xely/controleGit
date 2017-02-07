@@ -43,10 +43,18 @@ public class Main {
         objects.add(droit4);
 
         try {
-            mapper.writeValue(new File("D:\\Documents\\Downloads\\controleJson.json"), objects);
+            mapper.writeValue(new File("controleJson.json"), objects);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            Configuration configuration = mapper.readValue(new File("conf.prog"), Configuration.class);
+            System.out.println(configuration.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
