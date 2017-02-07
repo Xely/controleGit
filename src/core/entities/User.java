@@ -1,9 +1,13 @@
+package entities;
+
+import java.util.ArrayList;
+
 public class User {
     public String nom;
     public String prenom;
     public String login;
     public String password;
-    public ArrayList<Droit> droits; 
+    public ArrayList<Droit> droits;
 
     public String getNom() {
         return nom;
@@ -11,6 +15,14 @@ public class User {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public ArrayList<Droit> getDroits() {
+        return droits;
+    }
+
+    public void setDroits(ArrayList<Droit> droits) {
+        this.droits = droits;
     }
 
     public String getPrenom() {
@@ -38,7 +50,7 @@ public class User {
     }
     
     public User() {
-        this.droits = new ArrayList<Droit>()
+        this.droits = new ArrayList<Droit>();
     }
 
     public User(String nom, String prenom, String login, String password) {

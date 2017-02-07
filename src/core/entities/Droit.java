@@ -1,47 +1,41 @@
+package entities;
+
 public class Droit {
     public String niveau;
     public String sévérité;
     public String nom;
     public String société;
 
-    
-    public String niveau() 
-    {
+    public String getNiveau() {
         return niveau;
     }
 
-    public String sévérité() 
-    {
+    public void setNiveau(String niveau) {
+        this.niveau = niveau;
+    }
+
+    public String getSévérité() {
         return sévérité;
     }
-    
-    public String nom() 
-    {
-        return nom;
-    }
-    
-   public String société() 
-   {
-        return société;
-   }
 
-   public void setPrenom(String niveau) 
-   {
-        this.niveau = niveau;
-   }
-
-    public void setPrenom(String sévérité) 
-    {
+    public void setSévérité(String sévérité) {
         this.sévérité = sévérité;
     }
 
-    public void setPrenom(String nom) 
-    {
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
-    public void setPrenom(String société) 
-    {
+    public String getSociété() {
+        return société;
+    }
+
+    public void setSociété(String société) {
         this.société = société;
     }
+
 }
