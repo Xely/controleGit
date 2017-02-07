@@ -1,5 +1,6 @@
 package entities;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Droit {
@@ -44,7 +45,18 @@ public class Droit {
         this.nom = nom;
     }
 
-    public void setSociété(String société) 
+    @Override
+	public String toString() {
+    	ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+	}
+
+	public void setSociété(String société) 
     {
         this.société = société;
     }
