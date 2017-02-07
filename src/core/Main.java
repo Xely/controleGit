@@ -1,7 +1,10 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import entities.Droit;
 import entities.User;
+import org.codehaus.jackson.map.ObjectMapper;
 
 public class Main {
 
@@ -29,6 +32,21 @@ public class Main {
     	
     	user.setDroits(listeDroitUser);
     	user1.setDroits(listeDroitUser1);
-    	
+
+        ObjectMapper mapper = new ObjectMapper();
+        ArrayList<Object> objects = new ArrayList<Object>();
+        objects.add(user);
+        objects.add(user1);
+        objects.add(droit);
+        objects.add(droit1);
+        objects.add(droit3);
+        objects.add(droit4);
+
+        try {
+            mapper.writeValue(new File("D:\\Documents\\Downloads\\controleJson.json"), objects);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
