@@ -8,6 +8,15 @@ public class User {
     public String login;
     public String password;
     public ArrayList<Droit> droits;
+    public int numero;
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
     public String getNom() {
         return nom;
