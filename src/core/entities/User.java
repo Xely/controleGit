@@ -3,6 +3,8 @@ package entities;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class User {
@@ -72,5 +74,27 @@ public class User {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public ArrayList<User> getAll() {
+        ArrayList<User> courses = new ArrayList<User>();
+        try {
+            ResultSet resultSet = MySQLAccess.getInstance().resultQuery(
+                    "SELECT * FROM user;");
+            while (resultSet.next()) {
+                User course = new User(resultSet.getInt("id"),
+                                       resultSet.getString("nom"),
+                        resultSet.getString("prénom"),
+                        resultSet.getString("login"),
+                        resultSet.getString("password"),
+                        resulSet.get);
+                courses.add(course);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return courses;
     }
 }
