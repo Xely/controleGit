@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
     	
     	User user = new User("Geoffrey","Fabbro","Ziguard","Ziguard");
-    	User user1 = new User("Julien","","Xelty","Xelty");
+    	User user1 = new User("Julien","guyader","Xelty","Xelty");
     	
     	
     	Droit droit = new Droit ();
